@@ -1,12 +1,12 @@
-import java.util.PriorityQueue;
+import java.util.LinkedList;
 
-public class PriorityQueueHospital<PatientType extends Comparable<PatientType>> extends Hospital<PatientType>
+public class QueueHospital<PatientType> extends Hospital<PatientType>
 {
-	private PriorityQueue<PatientType> patients;
+	private LinkedList<PatientType> patients;
 	
-	public PriorityQueueHospital()
+	public QueueHospital()
 	{
-		patients = new PriorityQueue<>();
+		patients = new LinkedList<>();
 	}
 	
 	public void addPatient(PatientType patient)
@@ -33,7 +33,7 @@ public class PriorityQueueHospital<PatientType extends Comparable<PatientType>> 
 	
 	public PatientType nextPatient()
 	{
-		return patients.peek();
+		return patients.getFirst();
 	}
 	
 	public int numPatients()

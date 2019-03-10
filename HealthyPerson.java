@@ -9,7 +9,7 @@ public class HealthyPerson extends Person
 		this.reason = reason;
 	}
 	
-	public int compareToImpl(Person o)
+	protected int compareToImpl(Person o)
 	{
 		if(!(o instanceof HealthyPerson))
 		{
