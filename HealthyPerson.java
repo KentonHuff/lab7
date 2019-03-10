@@ -9,7 +9,8 @@ public class HealthyPerson extends Person
 		this.reason = reason;
 	}
 	
-	protected int compareToImpl(Person o)
+	//UML says protected
+	public int compareToImpl(Person o)
 	{
 		if(!(o instanceof HealthyPerson))
 		{
