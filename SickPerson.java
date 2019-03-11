@@ -9,8 +9,8 @@ public class SickPerson extends Person
 		this.severity = severity;
 	}
 	
-	//UML says protected
-	public int compareToImpl(Person o)
+	@Override
+	protected int compareToImpl(Person o)
 	{
 		if(!(o instanceof SickPerson))
 		{
@@ -19,17 +19,10 @@ public class SickPerson extends Person
 		
 		SickPerson other = (SickPerson)o;
 		
-		if(this.severity > other.severity)
-		{
-			return -1;
-		}
-		else if(this.severity < other.severity)
-		{
-			return 1;
-		}
-		return 0;
+		return other.severity - this.severity;
 	}
 	
+	@Override
 	public String toString()
 	{
 		return String.format("%s Severity level %d", super.toString(), severity);

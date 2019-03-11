@@ -10,7 +10,8 @@ public class HealthyPerson extends Person
 	}
 	
 	//UML says protected
-	public int compareToImpl(Person o)
+	@Override
+	protected int compareToImpl(Person o)
 	{
 		if(!(o instanceof HealthyPerson))
 		{
@@ -20,6 +21,7 @@ public class HealthyPerson extends Person
 		return this.getName().compareToIgnoreCase(o.getName());
 	}
 	
+	@Override
 	public String toString()
 	{
 		return String.format("%s In for %s", super.toString(), reason);
