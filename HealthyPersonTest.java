@@ -1,6 +1,9 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+/*
+ * A JUnit test class testing each method in the HealthyPerson class
+ */
 public class HealthyPersonTest
 {
 	@Test

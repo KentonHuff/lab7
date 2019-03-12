@@ -1,6 +1,9 @@
-
+/*
+ * A class describing a healthy person visiting a hospital
+ */
 public class HealthyPerson extends Person
 {
+	//The reason that the healthy person id visiting the hospital
 	private String reason;
 	
 	public HealthyPerson(String name, int age, String reason)
@@ -9,7 +12,7 @@ public class HealthyPerson extends Person
 		this.reason = reason;
 	}
 	
-	//UML says protected
+	//Compares to other healthy people based on name ignoring case. Returns 0 if not a healthy person
 	@Override
 	protected int compareToImpl(Person o)
 	{
